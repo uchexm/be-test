@@ -6,7 +6,7 @@ const MONGODB = "mongodb+srv://nwakauc1:1234@cluster0.h0tfuab.mongodb.net/?retry
 
 
 const typeDefs = require('./graphql/typeDefs');
-const resolvers = require('./graphql/resolvers');
+const resolvers = require('./graphql/resolvers/index');
 const server = new ApolloServer({
   typeDefs,
   resolvers
