@@ -24,4 +24,23 @@ type Mutation {
   deleteMovie( ID: ID!): Boolean
   editMovie(ID: ID!, movieInput: MovieInput ): Boolean
 }
+
+type User {
+  username: String
+  email: String
+  password: String
+  token: String
+}
+
+input RegisterInput {
+  username: String
+  email: String
+  password: String
+  confirmPassword: String
+}
+
+input LoginInput {
+  email: String
+  password: String
+}
 `
