@@ -45,7 +45,7 @@ module.exports = {
 
       if (user && (await bcrypt.compare(password, user.password))) {
         const token = jwt.sign({
-          user_id: newUser._id, email
+          user_id: user._id, email
         }, "JWT_STRING", {
           expiresIn: "2h"
         });
