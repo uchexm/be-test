@@ -25,6 +25,17 @@ module.exports = {
         id: res.id,
         ...res._doc
       }
+    },
+    async deleteMovie(_, { ID }) {
+      const wasDeleted = (await Movie.deleteOne({ _id: ID })).deletedCount;
+      return wasDeleted;
+    },
+    async editMovie(_, { ID, movieInput: {
+      name, description
+    } }) {
+      const wasEdited = (await Movie.updateOne({ _id: ID }, { name: name, description: description })).modifiedCount;
+      return wasEdited;
+
     }
 
   }
