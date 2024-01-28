@@ -1,21 +1,50 @@
-const { ApolloServer } = require('apollo-server');
+const { gql } = require('apollo-server');
 
-const mongoose = require('mongoose');
+module.exports = gql`
+type Movie {
+  name: String
+  description: String
+  createdAt: String
+  thumbsDown: Int
+  thumbsUp: Int
+}
 
-const MONGODB = "mongodb+srv://nwakauc1:1234@cluster0.h0tfuab.mongodb.net/?retryWrites=true&w=majority";
+input MovieInput {
+  name: String
+  description: String
+}
+
+type Query {
+  movie(ID: ID!): Movie!
+  getMovies(amount: Int): [Movie]
+  user(id: ID!): User
+}
+
+type Mutation {
+  createMovie(movieInput: MovieInput): Movie!
+  deleteMovie( ID: ID!): Boolean
+  editMovie(ID: ID!, movieInput: MovieInput ): Boolean
+  registerUser(registerInput: RegisterInput): User
+  loginUser(loginInput: LoginInput): User
+}
 
 
-const typeDefs = require('./graphql/typeDefs');
-const resolvers = require('./graphql/resolvers/index');
-const server = new ApolloServer({
-  typeDefs,
-  resolvers
-});
+type User {
+  username: String
+  email: String
+  password: String
+  token: String
+}
 
-mongoose.connect(MONGODB, { useNewUrlParser: true }).then(() => {
-  console.log('MongoDb connected successfully');
-  return server.listen({ port: 5000 });
-})
-  .then((res) => {
-    console.log(`Server listening on ${res.url}`);
-  });
+input RegisterInput {
+  username: String
+  email: String
+  password: String
+  confirmPassword: String
+}
+
+input LoginInput {
+  email: String
+  password: String
+}
+`
