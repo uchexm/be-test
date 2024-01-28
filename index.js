@@ -9,7 +9,7 @@ const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers/index');
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
 });
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
