@@ -119,9 +119,9 @@ In order to run this project you need:
 This backend is powered by Node.js and Apollo Server, utilizing GraphQL for efficient client-server communication. MongoDB serves as the database, providing flexibility and scalability. GraphQL resolvers orchestrate data operations, seamlessly integrating with MongoDB collections. This architecture ensures a robust, scalable, and efficient API solution for modern web applications.
 </a>
 
-## 🤔 What could be done differently<a name="what-could-be-done-differently"></a>
+## 🤔 What could be done differently<a name="what-could-be-done-differently">
 
-Implementing robust error handling strategies, such as providing clear error messages and graceful error recovery options, can significantly improve user satisfaction and retention. Additionally, incorporating client-side validation to prevent invalid user inputs before making requests to the backend can streamline the user workflow and reduce server load. Moreover, integrating analytics tools to track user interactions and monitor application performance can provide valuable insights for further optimization and refinement.
+During app development, I recognized the value of a Test-Driven Development (TDD) approach for ensuring code quality. However, due to time constraints, I prioritized implementing core functionalities over TDD. Still, I understand the benefits of TDD and aim to integrate it into future projects for enhanced reliability and maintainability.</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
