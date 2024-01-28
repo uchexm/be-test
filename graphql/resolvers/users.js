@@ -13,6 +13,10 @@ module.exports = {
     async registerUser(_, { registerInput: { username, password, email } }) {
       const oldUser = await User.findOne({ email });
 
+      if (!username || !password || !email) {
+        throw new ApolloError('Username, password, and email are required fields.');
+      }
+
       if (oldUser) {
         throw new ApolloError(`User ${oldUser.username} already exists`);
       }
@@ -42,6 +46,10 @@ module.exports = {
     },
     async loginUser(_, { loginInput: { password, email } }) {
       const user = await User.findOne({ email });
+
+      if (!password || !email) {
+        throw new ApolloError('Password and email are required fields.');
+      }
 
       if (user && (await bcrypt.compare(password, user.password))) {
         const token = jwt.sign({
