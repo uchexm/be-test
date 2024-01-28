@@ -45,8 +45,7 @@
 
    <summary>Database</summary>
   <ul>
-
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+  <li><a href="https://www.mongodb.com/">MongoDB</a></li>
 
   </ul>
 </details>
@@ -56,10 +55,6 @@
 **Full Stack Test FE** is a React frontend for [Full Stack Test BE](https://github.com/uchexm/be-test) project.
 
 <!-- LIVE DEM -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://fe/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
