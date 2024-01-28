@@ -52,7 +52,7 @@
 
 # 🍿 Full Stack Test Front End <a name="about-project"></a>
 
-**Full Stack Test FE** is a React frontend for [Full Stack Test BE](https://github.com/uchexm/be-test) project.
+**Full Stack Test FE** is a React frontend for [Full Stack Test FE](https://github.com/uchexm/fe-test) project.
 
 <!-- LIVE DEM -->
 
