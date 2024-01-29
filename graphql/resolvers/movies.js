@@ -25,7 +25,7 @@ module.exports = {
         createdAt: new Date().toISOString(),
         thumbsDown: 0,
         thumbsUp: 0,
-
+        createdBy: user.username
       });
 
       const res = await createdMovie.save(); // Save to MongoDB

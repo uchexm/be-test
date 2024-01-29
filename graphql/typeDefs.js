@@ -7,6 +7,7 @@ type Movie {
   createdAt: String
   thumbsDown: Int
   thumbsUp: Int
+  createdBy: String
 }
 
 input MovieInput {

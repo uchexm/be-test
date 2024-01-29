@@ -5,7 +5,8 @@ const movieSchema = new Schema({
   description: String,
   createdAt: String,
   thumbsUp: Number,
-  thumbsDown: Number
+  thumbsDown: Number,
+  createdBy: String
 });
 
 module.exports = model('Movie', movieSchema);

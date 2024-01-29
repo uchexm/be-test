@@ -65,6 +65,11 @@
 - **Home Page**
 - **Login Page**
 - **Forms**
+-
+
+## Screenshot
+
+![Page screenshot](/public/scs.PNG "Page Screenshot")
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
