@@ -1,4 +1,5 @@
 const Movie = require('../../models/Movie');
+const { getUser } = require('../middleware/auth');
 const { AuthenticationError } = require('apollo-server');
 const jwt = require('jsonwebtoken');
 
@@ -13,8 +14,11 @@ module.exports = {
   },
   Mutation: {
     async createMovie(_, { movieInput: { name, description } }, context) {
+      const user = getUser(context);
 
-
+      if (!user) {
+        throw new AuthenticationError('You must be logged in to create a movie.');
+      }
       const createdMovie = new Movie({
         name: name,
         description: description,
